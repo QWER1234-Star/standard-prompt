@@ -45,13 +45,13 @@
 
 ## 安装
 
-仓库根目录本身就是 Skill 目录（含 `SKILL.md`），复制整个文件夹即可。
+仓库根目录本身就是 Skill 目录（含 `SKILL.md`），复制整个文件夹即可。仓库名是 `standard-prompt`，安装时请把目录命名为 `ai-task-brief`——目录名决定 Skill 名。
 
 **WorkBuddy**
 
 ```bash
-git clone <你的仓库地址>
-cp -r ai-task-brief ~/.workbuddy/skills/ai-task-brief
+git clone https://github.com/QWER1234-Star/standard-prompt.git
+cp -r standard-prompt ~/.workbuddy/skills/ai-task-brief
 ```
 
 **支持 Agent Skills 的其他工具（Claude Code 等）**
@@ -159,19 +159,18 @@ ai-task-brief/
 
 ## 出处与开源
 
-方法出自「三步 · AI 真实任务」的一条口播视频（2026-11-08，72 秒）。视频链接：
+方法出自「三步 · AI 真实任务」的一条口播视频（2026-11-08，72 秒）。视频链接待发布后回填。
 
 本仓库是对该口播的展开与工程化，不含视频素材、不含账号引流内容，可独立使用。
 
-发布到 GitHub：
+**仓库地址**：https://github.com/QWER1234-Star/standard-prompt
+
+本地开发与校验：
 
 ```bash
-cd ai-task-brief
-git init
-git add .
-git commit -m "feat: initial release of ai-task-brief skill"
-git remote add origin git@github.com:<你的用户名>/ai-task-brief.git
-git push -u origin main
+git clone https://github.com/QWER1234-Star/standard-prompt.git
+cd standard-prompt
+python scripts/validate_brief.py examples/01-笔记转口播稿.md --strict
 ```
 
 贡献方式见 `CONTRIBUTING.md`。许可：MIT，见 `LICENSE`。
